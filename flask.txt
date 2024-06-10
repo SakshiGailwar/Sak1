@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>Ordering element in flask app with tag</title>
+<body>
+<ul>
+{% for member in member : %}
+<li>{{member}}</li>
+{% endfor %>
+</ul>
+</body>
+</html>
+
+
+from flask import flask ,render_template
+@app.route('/)
+@app.route('/indexpage')
+def indexpage():
+    username = ['A','B','C','D','E']
+    return render_template('ist.html',title= 'WELCOME',username=username)
+if __name__ ==' __main__':
+  app.run(debug = True)
